@@ -12,11 +12,8 @@ import icon15 from "../assets/koneksi.png"; // Path menuju file logo
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const groupId = localStorage.getItem("group_id"); // Ambil group_id dari penyimpanan lokal
-
+  const groupId = localStorage.getItem("group_id");
 
   useEffect(() => {
     if (!groupId) {
@@ -24,7 +21,6 @@ const AdminDashboard = () => {
     }
   }, [groupId]);
 
-  // Fungsi logout
   const handleLogout = () => {
     if (window.confirm("Apakah Anda yakin ingin keluar?")) {
       localStorage.removeItem("token");
@@ -35,22 +31,6 @@ const AdminDashboard = () => {
       localStorage.removeItem("adminId");
       navigate("/");
     }
-  };
-  
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    setIsLoading(true); // Menyalakan status loading saat pencarian dimulai
-
-    if (!searchQuery.trim()) {
-      setError("Masukkan kata kunci untuk mencari pertanyaan.");
-      setIsLoading(false); // Menonaktifkan status loading setelah error
-      return;
-    }
-
-    // Navigasi ke halaman QnAList dengan query pencarian
-    navigate("/admin/list", { state: { searchQuery } });
-    setIsLoading(false); // Menonaktifkan status loading setelah navigasi selesai
   };
 
   const handleManageKeywords = () => {
