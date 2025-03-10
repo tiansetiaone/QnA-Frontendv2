@@ -1,0 +1,467 @@
+.list-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: white;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #2c736d, #53d9ce);
+  color: white;
+}
+.back-button {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 10rem;
+}
+
+.header-content {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -3em;
+}
+
+.logo-qna {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #028090;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.logo-qna img {
+  width: 5em;
+}
+
+.logout-btn-qna {
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  padding: 0.2em;
+  background: white;
+  border-radius: 25rem;
+  right: 0;
+  margin-right: 2em;
+}
+
+.title-lookAsk {
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e0fc0f;
+}
+.filter {
+  text-align: right;
+  padding: 10px 20px;
+  background: #f4f4f4;
+}
+
+.filter button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cari-container {
+  text-align: right;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #2c736d, #53d9ce);
+  display: flex;
+  justify-content: end;
+  margin-bottom: -2em;
+}
+
+.questions-list {
+  padding: 20px;
+}
+
+.question-card-qna {
+  background: #f9f9f9;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.details {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.answer-link {
+  color: #028090;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.numbered-list {
+  list-style: none; /* Hilangkan bullet default */
+  counter-reset: list-counter; /* Inisialisasi counter */
+  padding: 0rem 2rem 0rem 1rem;
+}
+
+.numbered-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px; /* Ruang untuk angka */
+  counter-increment: list-counter; /* Tambah counter */
+}
+.numbered-list li::before {
+  content: counter(list-counter) ". "; /* Tampilkan angka */
+  position: absolute;
+  left: 0; /* Posisi angka */
+  font-weight: bold;
+  color: #007bff; /* Warna angka */
+}
+
+li button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 3em;
+  margin-right: 1em;
+}
+
+.status-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-submit-qna {
+  background: #298b8b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-disabled {
+  background-color: grey !important; /* Warna abu-abu */
+}
+
+.btn-submit-qna:hover {
+  background: #555;
+}
+.answer-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.question-card-qna .answer-section {
+  max-height: 1000px; /* Pastikan cukup besar untuk konten jawaban */
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-copy {
+  position: relative;
+  background-color: #23aa27;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  height: 2em;
+  bottom: 0;
+  margin-top: 0em;
+}
+
+.btn-copy:hover {
+  background-color: #164e19; /* Warna hijau lebih gelap saat hover */
+}
+
+.list-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-button .btn-delete {
+  border-radius: 25px;
+  width: 6.9rem;
+  font-size: 1rem;
+  margin-top: 5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.filter-container2 {
+  display: flex;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+      background-color: #f4f4f4;
+}
+select {
+  border-radius: 0.5em;
+  padding: 0.1em;
+  margin-left: 0.5em;
+  color: #666;
+}
+select option {
+  color: #000000;
+}
+
+.delete-btn2 {
+  transition: background 0.3sease;
+  position: static;
+  margin-left: 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f44336;
+  color: #fff;
+  width: 5em;
+}
+.button-container {
+  display: flex;
+          flex-direction: row;
+          gap: 1em;
+          justify-content: flex-start;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list-container {
+    font-size: 0.9rem;
+  }
+
+  header {
+    flex-direction: row;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .header-content {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 1em;
+  }
+
+  .logo-qna img {
+    width: 3.5em;
+  }
+
+  .logout-btn-qna {
+    position: relative;
+    margin: 10px 0;
+    right: auto;
+  }
+
+  .title-lookAsk {
+    font-size: 1.2rem;
+  }
+
+  .filter {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .filter button {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+  .cari-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .questions-list {
+    padding: 10px;
+  }
+
+  .question-card-qna {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+
+  .details {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+
+  .question {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .answer-link {
+    font-size: 0.8rem;
+  }
+
+  .numbered-list {
+    padding: 0 1rem;
+  }
+
+  .numbered-list li {
+    padding-left: 25px;
+  }
+
+  li button {
+    position: static;
+    margin: 10px 0 0;
+  }
+
+  .btn-submit-qna {
+    font-size: 0.9rem;
+    margin-top: 1.5em;
+    padding: 0.5rem 2rem;
+    width: 6.9rem;
+    height: 2.1rem;
+  }
+
+  .list-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .list-button .btn-delete {
+    position: relative;
+    border-radius: 25px;
+    width: 6.9rem;
+    font-size: 1rem;
+    margin-top: 22px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .pagination {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .btn-copy {
+    position: relative;
+    background-color: #23aa27; /* Warna hijau */
+    border: none; /* Tidak ada border */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    font-size: 16px; /* Ukuran font */
+    transition: background-color 0.3s; /* Efek transisi pada background saat hover */
+    height: 2em;
+    bottom: 0;
+  }
+
+  .btn-copy:hover {
+    background-color: #164e19; /* Warna hijau lebih gelap saat hover */
+  }
+  .filter-container2 {
+    display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+        background-color: #f4f4f4;
+        margin-top: -1rem;
+        padding: 8px;
+        gap: 2rem;
+  }
+  .logo-qna {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #028090;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.title-lookAsk {
+  font-size: 1.9rem;
+}
+.search-form button {
+  margin-right: 0.9em;
+}
+}
+
+@media (max-width: 600px) {
+  .filter-container2 {
+    display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+  }
+  .title-lookAsk {
+    font-size: 1.4rem;
+}
+.logo-qna {
+  font-size: 1.4rem;
+}
+.header-content {
+  margin-left: 0em;
+}
+.search-form button {
+  margin-right: 0.6em;
+}
+}
+
+@media (max-width: 480px) {
+  .list-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .status-link {
+    display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+  }
+  .logout-btn-qna{
+    display: none;
+  }
+  .header-content {
+    margin-left: 0em;
+    margin-top: 2em;
+}
+.back-button {
+  margin-bottom: 7em;
+  position: absolute;
+  margin-left: -1em;
+}
+.filter-container{
+  margin-top: -2em;
+}
+.search-form button {
+  margin-right: 0.4em;
+}
+.delete-btn2 {
+  position: static;
+  margin-left: 0em;
+}
+.button-container {
+  display: flex;
+          flex-direction: row;
+          gap: 1em;
+          justify-content: flex-start;
+}
+}

@@ -1,0 +1,479 @@
+/* AnswerQuestions.css */
+
+/* Kontainer utama */
+.category-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: white;
+  overflow: hidden;
+}
+
+/* Header */
+.answer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.answer-header .back-button {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.answer-header .back-button:hover {
+  text-decoration: underline;
+}
+
+.answer-header h1 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+/* Detail pertanyaan */
+.question-details {
+  margin-bottom: 20px;
+}
+
+.question-details p {
+  margin: 5px 0;
+  font-size: 25px;
+  color: #555;
+}
+
+.question-details strong {
+  color: #333;
+}
+
+/* Form untuk menjawab pertanyaan */
+.answer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-form textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.answer-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Tombol submit */
+.answer-form .submit-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-form .submit-button:hover {
+  background-color: #0056b3;
+}
+
+.answer-form .submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Pesan sukses */
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Pesan error */
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.answer-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formAnswer .submit-button {
+  width: 50%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.formAnswer textarea {
+  width: 80rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+.category-list-main {
+    max-height: 300px; /* Batas tinggi maksimal */
+  overflow-y: auto; /* Menambahkan scroll jika konten melebihi tinggi */
+  display: flex;
+  padding: 2em;
+  border: solid 1px black;
+  border-radius: 2em 2em 2em 2em;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.42);
+  background: #f5f5f5;
+  max-width: 50%;
+}
+.category-list {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.category-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.question-answer-container {
+  padding: 2em 6.2em 6.2em 6.2em;
+}
+
+.add-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-category input {
+  width: 50%;
+  height: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.add-category button {
+  width: 20%;
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.add-category button:hover {
+  background: #555;
+}
+
+.category-list-main {
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.category-list li input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.category-list li .delete-btn:hover {
+  opacity: 0.8;
+}
+
+.category-list li .edit-btn {
+  background: #ffc107;
+  color: #fff;
+}
+
+
+.category-list li .save-btn {
+  background: #4caf50;
+  color: #fff;
+}
+
+.category-list li .cancel-btn {
+  background: #9e9e9e;
+  color: #fff;
+}
+
+  .answer-header h1 {
+    font-size: 1.2em;
+  }
+
+  .category-list-main {
+    width: 100%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .category-list li {
+    font-size: 14px;
+  }
+
+  .category-list li span {
+    margin-bottom: 5px;
+  }
+
+  .category-list li input {
+    width: 100%; /* Gunakan lebar penuh */
+    margin-right: 0; /* Hilangkan margin kanan */
+    margin-bottom: 10px;
+  }
+
+  .add-category {
+    margin-top: 1em;
+    gap: 0.5em;
+  }
+
+  .add-category input {
+    width: 43em;
+    height: 3em;
+    font-size: 0.9em;
+  }
+
+  .add-category button {
+    width: 32%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .category-list-container {
+    padding: 2em 11em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question-answer-container {
+    padding: 1em; /* Kurangi padding untuk layar kecil */
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 12px; /* Perkecil ukuran font */
+    padding: 10px;
+  }
+  .category-list {
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .category-list li {
+            height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 11px;
+        border-bottom: 1px solid #e0e0e0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+  }
+  
+  .category-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .category-list li span {
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .category-list li input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .category-list li .delete-btn {
+position: relative;
+        top: -1.3em;
+        margin-left: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #f44336;
+        color: #fff;
+        width: 5em;
+  }
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .category-container {
+    padding: auto; /* Tambahkan padding agar lebih nyaman di layar kecil */
+  }
+
+  .answer-header h1 {
+    font-size: 1.2em;
+  }
+
+  .category-list-main {
+    width: 90%;
+    padding: 15px;
+    box-shadow: none;
+    max-height: 275px;
+    overflow-y: auto;
+  }
+
+  .category-list li {
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: flex-start; /* Teks rata kiri */
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .category-list li span {
+    margin-bottom: 5px;
+  }
+
+  .category-list li input {
+    width: 100%; /* Gunakan lebar penuh */
+    margin-right: 0; /* Hilangkan margin kanan */
+    margin-bottom: 10px;
+  }
+
+  .category-list li button {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%; /* Gunakan lebar penuh */
+  }
+
+  .add-category {
+    width: 100%;
+    margin-top: 1em;
+    gap: 0.5em;
+}
+  .add-category input {
+    width: 100%; /* Gunakan lebar penuh */
+    height: 3em;
+    font-size: 0.9em;
+  }
+
+  .add-category button {
+    width: 55%; /* Gunakan lebar penuh */
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .category-list-container {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        flex-wrap: nowrap;
+        flex-direction: column;
+  }
+
+  .question-answer-container {
+    padding: 1em; /* Kurangi padding untuk layar kecil */
+  }
+
+  .success-message,
+  .error-message {
+    font-size: 12px; /* Perkecil ukuran font */
+    padding: 10px;
+  }
+  .category-list {
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .category-list li {
+            height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 11px;
+        border-bottom: 1px solid #e0e0e0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+  }
+  
+  .category-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .category-list li span {
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .category-list li input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .category-list li .delete-btn {
+            top: -0.3em;
+      }
+}
+
+

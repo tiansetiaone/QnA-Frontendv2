@@ -1,0 +1,298 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #2c736d, #53d9ce);
+}
+
+.login-container form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+form h2 {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 70%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+form input::placeholder {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.btn-token {
+  width: 50%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 2rem;
+}
+
+.btn-token:hover {
+  background: #555;
+}
+
+form a {
+  color: yellow;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+form p {
+  color: yellow;
+  font-size: 0.9rem;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.login-container .logo-container2 {
+  background: white;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-left3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 2rem;
+}
+
+.forGot {
+  font-family: "Irish Grover", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login-left3 h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.input-group-reg {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 25px;
+  padding: 0rem 0.2rem 0rem 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.iconForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  width: 3.5rem;
+  font-size: 1rem;
+  height: 3em;
+  margin-bottom: 2px;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #298b8b, #39ada3);
+}
+.iconForm img {
+  width: 2.5em;
+}
+
+.input-group-reg input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  width: 20em;
+  height: 2em;
+  margin-bottom: 1px;
+  border-radius: 0rem 1.5rem 1.5rem 0rem;
+  background-color: transparent;
+}
+
+.logo-container2 {
+  line-height: 1rem;
+}
+.logo-container2 img {
+  width: 15em;
+}
+
+.logo-container2 h1 {
+  font-size: 6rem;
+  color: black;
+  font-family: "Itim", serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* Aturan untuk layar dengan lebar maksimum 768px */
+  .login-container {
+    flex-direction: column;
+    margin-top: -2em;
+    width: 106%;
+    min-height: fit-content;
+  }
+
+  .login-left3 {
+    min-height: 87vh;
+    margin-top: 11rem;
+  }
+
+  .login-container .logo-container2 {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    margin-top: 3rem;
+  }
+
+  .logo-container2 {
+    position: absolute;
+    top: 0;
+  }
+
+
+  .logo-container2 img {
+    width: 10em;
+  }
+
+  .logo-container2 h1 {
+    display: none;
+  }
+
+  form input {
+    width: 90%;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .btn-token {
+    width: 70%;
+  }
+
+  .input-group-reg {
+    width: 120%;
+  }
+
+  .input-group-reg input {
+    width: 100%;
+  }
+
+  .iconForm {
+    width: 3rem;
+    height: 3.1em;
+  }
+  .iconForm img {
+    width: 2.2em;
+}
+.back-button2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.forGot {
+  font-size: 1.5rem;
+}
+}
+
+
+@media (max-width: 480px) {
+  /* Aturan untuk layar dengan lebar maksimum 768px */
+  .login-container {
+    flex-direction: column;
+    margin-top: -2em;
+    width: 106%;
+    min-height: fit-content;
+  }
+
+.login-left3 {
+  min-height: 100vh;
+  margin-top: 7rem;
+}
+
+
+  .login-container .logo-container2 {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    margin-top: 3rem;
+  }
+
+  .logo-container2 {
+    position: absolute;
+    top: 0;
+  }
+
+  .logo-container2 img {
+    width: 10em;
+  }
+
+  .logo-container2 h1 {
+    display: none;
+  }
+
+  form input {
+    width: 85%;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .back-button2 {
+    width: 65%;
+  }
+
+.input-group-reg {
+  width: 140%;
+}
+
+  .iconForm {
+    width: 3rem;
+    height: 3em;
+  }
+  form p {
+    text-align: center;
+  }
+  .iconForm img {
+    width: 2.2em;
+}
+.back-button2 {
+display: none;
+}
+}
+

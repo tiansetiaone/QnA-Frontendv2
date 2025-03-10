@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Passion+One:wght@400;700;900&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f4f4f9;
+    --text-color: #333;
+    --bg-color: #ffffff;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+  }
+  

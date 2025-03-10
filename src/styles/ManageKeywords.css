@@ -1,0 +1,175 @@
+/* AnswerQuestions.css */
+
+/* Kontainer utama */
+.keyword-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: white;
+  overflow: hidden;
+}
+
+/* Header */
+.header-keyword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-keyword .back-button {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-keyword .back-button:hover {
+  text-decoration: underline;
+}
+
+.header-keyword h1 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #e0fc0f;
+}
+
+.formkeyword-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyword-main {
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 342px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+overflow-y: auto;
+display: flex;
+ border: solid 1px black;
+}
+.keyword-main ul li {
+  width: 19em;
+  text-align: left;
+  height: 2em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+.list-keyword {
+  display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4em;
+}
+
+.input-keyword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-keyword input {
+  width: 183%;
+  height: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.input-keyword button {
+  width: 55%;
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 1.5rem;
+  margin-bottom: 2em;
+  margin-left: 0.2em;
+}
+
+/* Pesan sukses */
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Pesan error */
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+  .success-message,
+  .error-message {
+    font-size: 12px; /* Perkecil ukuran font */
+    padding: 10px;
+  }
+ 
+  .list-keyword ul {
+    padding: 0; /* Hilangkan padding default pada ul */
+    margin: 0; /* Hilangkan margin default pada ul */
+    list-style: none; /* Hilangkan bullet points */
+  }
+  
+  .list-keyword ul li {
+    display: flex; /* Susun elemen dalam list secara horizontal */
+    justify-content: space-between; /* Pisahkan elemen di kiri (keyword) dan kanan (button) */
+    align-items: center; /* Pastikan elemen sejajar secara vertikal */
+    background: #f4f4f4; /* Warna background list */
+    padding: 10px 15px; /* Atur padding agar lebih rapi */
+    margin-bottom: 8px; /* Beri jarak antar list item */
+    border-radius: 5px; /* Buat sudut melengkung */
+    border: 1px solid #ccc; /* Tambahkan border */
+  }
+  
+  .delete-btn {
+    transition: background 0.3s ease; /* Efek hover */
+    position: relative;
+    top: -1.3em;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f44336;
+    color: #fff;
+    width: 5em;
+  }
+  
+  .delete-btn:hover {
+    background: #e60000; /* Warna tombol saat di-hover */
+  }
+  
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  
+}
+
+

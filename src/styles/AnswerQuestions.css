@@ -1,0 +1,217 @@
+/* AnswerQuestions.css */
+
+/* Kontainer utama */
+.answer-container {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: white;
+    overflow: hidden;
+  }
+  
+  /* header1 */
+  .answer-header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  
+  .answer-header1 .back-button:hover {
+    text-decoration: underline;
+  }
+  
+  .answer-header1 h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  /* Detail pertanyaan */
+  .question-details2 {
+    margin-bottom: 20px;
+  }
+  
+  .question-details2 p {
+    margin: 5px 0;
+    font-size: 25px;
+    color: #555;
+  }
+  
+  .question-details2 strong {
+    color: #333;
+  }
+  
+  .question-details2 button {
+    border-radius: 2em;
+    border: #ffffff87 solid 0.1em;
+    margin-bottom: 1em;
+    background-color: rgb(34, 193, 10);
+    color: white;
+  }
+  .question-details2 textarea {
+    position: absolute;
+    border-radius: 1em;
+    align-content: center;
+    margin-left: 1em;
+    width: 15em;
+    height: 1.5em;
+  }
+  
+  /* Form untuk menjawab pertanyaan */
+  .answer-form1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .answer-form1 textarea {
+    width: 100%;
+    min-height: 120px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .answer-form1 textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Tombol submit */
+  .answer-form1 .submit-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-form1 .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .answer-form1 .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Pesan sukses */
+  .success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Pesan error */
+  .error-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+.answer-form1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formAnswer1 .submit-button {
+    width: 30%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 2.5rem;
+}
+
+.formAnswer1 textarea {
+    width: 99%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+.questions-list-answer {
+    padding: 2em;
+    border: solid 1px black;
+    border-radius: 2em 2em 0em 0em;
+  }
+
+.question-answer-container1 {
+  padding: 2em 10.2em 10.2em 10.2em;
+}
+
+@media (max-width: 768px) {
+  .answer-container {
+    padding: auto;
+  }
+
+  .answer-header1 h1 {
+    font-size: 1.2em;
+  }
+
+  .question-details2 p {
+    font-size: 18px;
+  }
+
+  .answer-form1 textarea {
+    width: 105%;
+    font-size: 14px;
+  }
+
+  .formAnswer1 .submit-button {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .questions-list-answer {
+    border-radius: 1em 1em 0 0;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .question-answer-container1 {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .formAnswer1 {
+    width: 102%;
+  }
+}
+@media (max-width: 480px) {
+  .question-details2 p {
+    margin: 5px 0;
+    font-size: 22px;
+    color: #555;
+}
+.answer-form1 textarea {
+  width: 110%;
+  font-size: 14px;
+}
+.question-details2 textarea {
+  width: 12em;
+}
+}

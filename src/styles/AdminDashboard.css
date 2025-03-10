@@ -1,0 +1,349 @@
+.admin-dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(to right, #2C736D, #53D9CE);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .admin-dashboard h1 {
+    font-family: "Irish Grover", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 500px;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  .logout-btn {
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    padding: 0.1em;
+    background: white;
+    border-radius: 25rem;
+    right: 0;
+    margin-right: 2em;
+  }
+
+.logout-btn img {
+  width: 2.5em;
+  cursor: pointer;
+    height: 40px;
+}
+  
+  .search-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-form input {
+    width: 20em;
+    height: 3em;
+    z-index: 1;
+    position: relative;
+  } 
+  
+  .search-form button {
+    padding: 10px;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    font-size: 1rem;
+    width: 70px;
+    height: 75px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0.8em;
+    background: #11E8CF;
+    color: black;
+  }
+  
+
+  .logo1-container img {
+    width: 12em;
+    margin-bottom: 3rem;
+  }
+  
+
+  .input1-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 15px;
+    width: 30em;
+  }
+
+  .iconForm2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 3.5rem;
+    font-size: 1rem;
+    height: 4em;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  .iconForm2 img {
+    width: 2.5em;
+  }
+  .iconForm3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 3.5rem;
+    font-size: 1rem;
+    height: 4em;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  .iconForm3 img {
+    width: 2.5em;
+  }
+  .iconForm4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 3.5rem;
+    font-size: 1rem;
+    height: 4em;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  .iconForm4 img {
+    width: 2.5em;
+  }
+  .iconForm5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 3.5rem;
+    font-size: 1rem;
+    height: 4em;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  .iconForm5 img {
+    width: 2.5em;
+  }
+  .iconForm6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 3.5rem;
+    font-size: 1rem;
+    height: 4em;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  .iconForm6 img {
+    width: 2.5em;
+  }
+
+
+  @media (max-width: 768px) {
+    /* Masukkan aturan CSS untuk layar dengan lebar maksimum 768px di sini */
+    .admin-dashboard {
+      padding: 36px;
+    }
+  
+    .admin-dashboard h1 {
+      font-size: 1.2rem;
+    }
+
+    .group-form-admin {
+      width: 94%;
+    }
+  
+    .card {
+      height: 1.5rem;
+    }
+
+    .logo1-container {
+      margin-top: 7rem;
+    }
+
+    .search-form {
+      flex-direction: column;
+      width: 68%;
+    }
+  
+    .search-form input {
+      width: 90%;
+      height: 2.5em;
+      margin-bottom: 10px;
+      background: white;
+    }
+  
+    .search-form button {
+      width: 27%;
+      height: 60px;
+      font-size: 0.9rem;
+      margin-right: 1em;
+    }
+  
+    .logo {
+      width: 70px;
+    }
+  
+    .logout-btn {
+      right: -11px;
+      top: 10px;
+    }
+  
+    .logout-btn img {
+      width: 1.5em;
+      cursor: pointer;
+      height: 25px;
+    }
+  
+    .logo1-container img {
+      width: 10em;
+      margin-top: -5em;
+    }
+  
+    .input1-group {
+      width: 95%;
+    }
+  
+    .iconForm2, .iconForm3, .iconForm4, .iconForm5, .iconForm6 {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  
+    .iconForm2 img, .iconForm3 img, .iconForm4 img, .iconForm5 img, .iconForm6 img {
+      width: 1.8em;
+    }
+  }
+  @media (max-width: 650px) {
+    .search-form button { 
+      margin-right: 0.8em;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    /* Masukkan aturan CSS untuk layar dengan lebar maksimum 768px di sini */
+    .admin-dashboard {
+      padding: 10px;
+    }
+  
+    .admin-dashboard h1 {
+      font-size: 1.2rem;
+    }
+  
+    .card {
+      height: 1.5rem;
+    }
+
+    .logo1-container {
+      margin-top: 7rem;
+    }
+
+    .search-form {
+      flex-direction: column;
+      width: 68%;
+    }
+  
+    .search-form input {
+      width: 90%;
+      height: 2.5em;
+      margin-bottom: 10px;
+      background: white;
+    }
+  
+    .search-form button {
+      width: 27%;
+      height: 59px;
+      font-size: 0.9rem;
+      margin-right: 0.4em;
+    }
+  
+    .logo {
+      width: 70px;
+    }
+  
+    .logout-btn {
+      right: -18px;
+      top: 10px;
+    }
+  
+    .logout-btn img {
+      width: 1.5em;
+      cursor: pointer;
+      height: 25px;
+    }
+  
+    .logo1-container img {
+      width: 10em;
+      margin-bottom: 2.5rem;
+    }
+  
+    .input1-group {
+      width: 95%;
+    }
+  
+    .iconForm2, .iconForm3, .iconForm4, .iconForm5, .iconForm6 {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  
+    .iconForm2 img, .iconForm3 img, .iconForm4 img, .iconForm5 img, .iconForm6 img {
+      width: 1.8em;
+    }
+    .group-form-admin {
+      width: 84%;
+  }
+  .logo1-container img {
+    margin-bottom: 1.5 rem;
+  }
+
+  }
+  

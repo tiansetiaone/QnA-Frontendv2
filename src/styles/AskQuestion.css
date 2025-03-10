@@ -1,0 +1,175 @@
+/* AskQuestion.css */
+
+.ask-question-container {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: white;
+    overflow: hidden;
+}
+
+.ask-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ask-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.back-button,
+.refresh-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.askquestion-container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 6.2em 6.2em 6.2em;
+}
+.formAskquestion {
+    width: 100%;
+}
+
+.formAskquestion textarea {
+    width: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    border: 1px solid black;
+}
+
+.ask-form {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.question-input {
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  resize: none;
+}
+
+.category-selector {
+display: none;
+}
+
+.submit-button {
+    width: 50%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 2.5rem;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 780px) {
+  
+.ask-question-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  margin: auto;
+  background: white;
+  overflow: hidden;
+}
+
+.ask-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.ask-header h2 {
+margin: 0;
+font-size: 18px;
+}
+
+.back-button,
+.refresh-button {
+background: none;
+border: none;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+}
+
+.askquestion-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em 6.2em 6.2em 6.2em;
+}
+.formAskquestion {
+  width: 80%;
+}
+
+.formAskquestion textarea {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  border: 1px solid black;
+}
+
+.ask-form {
+width: 100%;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 15px;
+}
+
+.question-input {
+height: 100px;
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+resize: none;
+}
+
+.category-selector {
+display: none;
+}
+
+.submit-button {
+  width: 30%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 2.5rem;
+}
+
+.submit-button:hover {
+background-color: #2980b9;
+}
+}

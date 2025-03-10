@@ -1,0 +1,22 @@
+/* User Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .user-dashboard {
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
