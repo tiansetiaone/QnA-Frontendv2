@@ -50,12 +50,17 @@ const Login = () => {
       } else {
         localStorage.removeItem("adminGroup");
       }
+      if (data.user.is_narasumber) {
+        localStorage.setItem("is_narasumber", data.user.is_narasumber);
+      } else {
+        localStorage.removeItem("is_narasumber");
+      }
       if (data.token) {
         localStorage.setItem("token", data.token);
       } else {
         localStorage.removeItem("token");
       }
-      
+
       if (data.user.group_id) {
         localStorage.setItem("group_id", data.user.group_id);
       } else {

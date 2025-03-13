@@ -346,25 +346,24 @@ const handleDeleteQuestion = async (questionId) => {
       </div>
 
 
-      
-{/* Daftar Pertanyaan */}
+    {/* Daftar Pertanyaan */}
 <div className="question-list">
   {isLoading ? (
     <p>Loading...</p>
   ) : error ? (
     <p style={{ color: "red" }}>{error}</p>
   ) : (
-<ul className="numbered-list">
-  {(searchQuery.trim() === "" || searchResults.length === 0
-    ? currentQuestions
-    : searchResults
-  ).map((q) => {
+    <ul className="numbered-list">
+      {(searchQuery.trim() === "" || searchResults.length === 0
+        ? currentQuestions
+        : searchResults
+      ).map((q) => {
         const assignedToMe =
           Number(q.assigned_to) === Number(loggedInAdminId) ||
           Number(q.assigned_to) === Number(loggedInAdminGroup);
 
-        // Kondisi tombol disabled berdasarkan is_narasumber
-        const isButtonDisabled = isNarasumber === 0 || !assignedToMe ;
+        // Perbaikan kondisi tombol
+        const isButtonDisabled = !(loggedInAdminGroup && Number(isNarasumber) === 1);
         const isButtonDisabled2 = !(loggedInAdminId || (isNarasumber === 1 && assignedToMe));
 
         return (
@@ -423,35 +422,36 @@ const handleDeleteQuestion = async (questionId) => {
                   </button>
                 </div>
               )}
-<div className="list-button">
-              {/* Tombol Jawab */}
-              {q.status === "pending" && (
-                <button
-                  className={`btn-submit-qna ${isButtonDisabled ? "btn-disabled" : ""}`}
-                  onClick={() => navigateToAnswer(q.id)}
-                  disabled={isButtonDisabled}
-                >
-                  Jawab
-                </button>
-              )}
 
-              {/* Tombol Hapus */}
-              {(loggedInAdminGroup || loggedInAdminId) && (
-                <button
-                  className={`btn-delete ${isButtonDisabled2 ? "btn-disabled" : ""}`}
-                  onClick={() => handleDeleteQuestion(q.id)}
-                  style={{
-                    backgroundColor: "red",
-                    color: "white",
-                    border: "none",
-                    padding: "0.5rem 2rem",
-                    cursor: "pointer",
-                  }}
-                  disabled={isButtonDisabled2}
-                >
-                  Hapus
-                </button>
-              )}
+              <div className="list-button">
+                {/* Tombol Jawab */}
+                {q.status === "pending" && (
+                  <button
+                    className={`btn-submit-qna ${isButtonDisabled ? "btn-disabled" : ""}`}
+                    onClick={() => navigateToAnswer(q.id)}
+                    disabled={isButtonDisabled}
+                  >
+                    Jawab
+                  </button>
+                )}
+
+                {/* Tombol Hapus */}
+                {(loggedInAdminGroup || loggedInAdminId) && (
+                  <button
+                    className={`btn-delete ${isButtonDisabled2 ? "btn-disabled" : ""}`}
+                    onClick={() => handleDeleteQuestion(q.id)}
+                    style={{
+                      backgroundColor: "red",
+                      color: "white",
+                      border: "none",
+                      padding: "0.5rem 2rem",
+                      cursor: "pointer",
+                    }}
+                    disabled={isButtonDisabled2}
+                  >
+                    Hapus
+                  </button>
+                )}
               </div>
             </div>
           </li>
