@@ -50,7 +50,12 @@ const Login = () => {
       } else {
         localStorage.removeItem("adminGroup");
       }
-
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      } else {
+        localStorage.removeItem("token");
+      }
+      
       if (data.user.group_id) {
         localStorage.setItem("group_id", data.user.group_id);
       } else {
