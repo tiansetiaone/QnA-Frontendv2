@@ -65,6 +65,7 @@ const QnAList = () => {
       localStorage.removeItem("user_id");
       localStorage.removeItem("adminGroup");
       localStorage.removeItem("adminId");
+      localStorage.removeItem("user");
       navigate("/");
     }
   };

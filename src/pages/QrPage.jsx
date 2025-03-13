@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';  
 import axios from 'axios';  
+import axiosInstance from "../services/axiosConfig"; // Pastikan import dari file axiosConfig.js
 import { useNavigate } from 'react-router-dom';  
 import { QRCodeCanvas } from 'qrcode.react';  
 
@@ -17,7 +18,9 @@ function QrPage() {
   const fetchQrCode = useCallback(async () => {  
     setLoading(true);  
     try {  
-      const response = await axios.get('/api/get-qr');  
+      const response = await axiosInstance.get('/get-qr'); // Pakai axiosInstance  
+      console.log("API Response:", response.data);  
+  
       setBackendStatus(true);  
       if (response.data.connected) {  
         setConnected(true);  
@@ -27,6 +30,7 @@ function QrPage() {
         setNotification('Nomor yang digunakan bukan admin. Silakan hubungi admin untuk akses.');  
         setQrCode(null);  
       } else if (response.data.currentQRCode) {  
+        console.log("QR Code Received:", response.data.currentQRCode); // Debugging
         setQrCode(response.data.currentQRCode);  
         setNotification('');  
         setConnected(false);  
@@ -37,7 +41,7 @@ function QrPage() {
     } catch (err) {  
       console.error('Error fetching QR Code:', err.message);  
       setBackendStatus(false);  
-      setError('Backend tidak aktif, coba lagi nanti.'); // Pesan kesalahan yang lebih informatif  
+      setError('Backend tidak aktif, coba lagi nanti.');  
     } finally {  
       setLoading(false);  
     }  

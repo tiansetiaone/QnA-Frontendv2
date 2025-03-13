@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 // Buat Context
 const AuthContext = createContext();
@@ -7,15 +7,25 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
+  // Ambil data user dari localStorage saat aplikasi dimulai
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser)); // Set user dari localStorage
+    }
+  }, []);
+
   // Fungsi untuk login dan menyimpan user
   const loginUser = (userData) => {
     setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData)); // Simpan user ke localStorage
   };
 
   // Fungsi logout
   const logoutUser = () => {
     setUser(null);
-    localStorage.removeItem("token");
+    localStorage.removeItem("user"); // Hapus user dari localStorage
+    localStorage.removeItem("token"); // Hapus token
   };
 
   return (

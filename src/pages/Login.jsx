@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import axios from "../services/axiosConfig";
 import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; // Import useAuth
+import { useAuth } from "../context/AuthContext";
 import "../styles/Login.css";
-import logo from "../assets/logos.png"; // Path menuju file logo
-import icon1 from "../assets/username.png"; // Path menuju file username icon
-import icon3 from "../assets/pass.png"; // Path menuju file password icon
-
+import logo from "../assets/logos.png";
+import icon1 from "../assets/username.png";
+import icon3 from "../assets/pass.png";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-  const { loginUser } = useAuth(); // Gunakan loginUser dari AuthContext
+  const { loginUser } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validasi input
     if (!username || !password) {
       setErrorMessage("Username dan Password wajib diisi.");
       alert("Username dan Password wajib diisi.");
@@ -29,67 +27,54 @@ const Login = () => {
       const { data } = await axios.post("/auth/login", { username, password });
       console.log("Respons server:", data);
 
-      // Simpan data user & token ke AuthContext
-      loginUser({
+      const userData = {
         id: data.user.id,
         username: data.user.username,
         role: data.user.role,
         token: data.token,
-        is_narasumber: data.user.is_narasumber,
+        is_narasumber: data.user.is_narasumber ? "1" : "0",
         group_id: data.user.group_id || null,
-      });
-    
-      // Debug respons server
-      console.log("Respons server:", data);
-      console.log("Role pengguna:", data.user?.role);
-      console.log("is_narasumber dari server:", data.user?.is_narasumber);
-    
-      // Simpan token dan informasi pengguna ke localStorage
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("user_id", data.user.id);
-      
-      // Simpan nilai is_narasumber (boolean 0 atau 1)
-      localStorage.setItem("is_narasumber", data.user.is_narasumber ? "1" : "0");
-    
-      // Simpan adminId dan adminGroup jika sesuai role
+      };
+
+      loginUser(userData);
+      localStorage.setItem("user", JSON.stringify(userData));
+
       if (data.user.role === "admin") {
         localStorage.setItem("adminId", data.user.id);
       } else {
-        localStorage.removeItem("adminId"); // Hapus jika bukan admin
+        localStorage.removeItem("adminId");
       }
-    
+
       if (data.user.role === "admin_group") {
         localStorage.setItem("adminGroup", data.user.id);
       } else {
-        localStorage.removeItem("adminGroup"); // Hapus jika bukan admin_group
+        localStorage.removeItem("adminGroup");
       }
-    
-      // Jika respons login menyertakan group_id
+
       if (data.user.group_id) {
         localStorage.setItem("group_id", data.user.group_id);
       } else {
-        localStorage.removeItem("group_id"); // Hapus jika tidak ada group_id
+        localStorage.removeItem("group_id");
       }
-    
-     // Redirect berdasarkan role atau is_narasumber
-     if (
-      data.user.role === "admin" ||
-      data.user.role === "admin_group" ||
-      data.user.is_narasumber === 1
-    ) {
-      navigate("/Admin");
-    } else if (data.user.role === "user") {
-      navigate("/User");
-    } else {
-      console.error("Role tidak dikenali");
-      alert("Role pengguna tidak dikenali.");
-    }
+
+      if (
+        data.user.role === "admin" ||
+        data.user.role === "admin_group" ||
+        data.user.is_narasumber === 1
+      ) {
+        navigate("/Admin");
+      } else if (data.user.role === "user") {
+        navigate("/User");
+      } else {
+        console.error("Role tidak dikenali");
+        alert("Role pengguna tidak dikenali.");
+      }
     } catch (error) {
       console.error("Login gagal:", error.response?.data?.error || error.message);
-    
+
       if (error.response?.data?.error) {
         const serverError = error.response.data.error;
-    
+
         if (serverError.includes("Invalid password")) {
           setErrorMessage("Password yang Anda masukkan salah.");
           alert("Password yang Anda masukkan salah.");
@@ -104,7 +89,7 @@ const Login = () => {
         setErrorMessage("Login gagal. Periksa kembali username dan password Anda.");
         alert("Terjadi kesalahan jaringan. Coba lagi nanti.");
       }
-    }      
+    }
   };
 
   return (
@@ -141,8 +126,8 @@ const Login = () => {
             Belum Punya Akun? <a href="/Register">Daftar disini</a>
           </p>
           <div className="forgot-password-link">
-                <Link to="/forgot-password">Lupa Password?</Link>
-            </div>
+            <Link to="/forgot-password">Lupa Password?</Link>
+          </div>
         </form>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>

@@ -32,6 +32,7 @@ const AppRouter = () => {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/admin/qr" element={<QrPage />} />
       
       {/* Route untuk User dan Admin */}
       <Route element={<ProtectedRoute user={user} allowedRoles={['user', 'admin']} />}>
@@ -48,7 +49,6 @@ const AppRouter = () => {
     <Route path="/admin/list" element={<QnAList />} />
     <Route path="/admin/category" element={<Category />} />
     <Route path="/admin/setting" element={<Setting />} />
-    <Route path="/admin/qr" element={<QrPage />} />
     <Route path="/admin/:groupId/manage-keywords" element={<ManageKeywords />} />
     <Route path="/admin/bot" element={<BotChatAdmin />} />
     <Route path="/:questionId/answers" element={<Answer />} />
