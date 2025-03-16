@@ -363,7 +363,7 @@ const handleDeleteQuestion = async (questionId) => {
           Number(q.assigned_to) === Number(loggedInAdminGroup);
 
         // Perbaikan kondisi tombol
-        const isButtonDisabled = !(loggedInAdminGroup && Number(isNarasumber) === 1);
+        const isButtonDisabled = !(assignedToMe && Number(isNarasumber) === 1);
         const isButtonDisabled2 = !(loggedInAdminId || (isNarasumber === 1 && assignedToMe));
 
         return (
@@ -425,7 +425,7 @@ const handleDeleteQuestion = async (questionId) => {
 
               <div className="list-button">
                 {/* Tombol Jawab */}
-                {q.status === "pending" && (
+                {(loggedInAdminGroup || loggedInAdminId) && q.status === "pending" && (
                   <button
                     className={`btn-submit-qna ${isButtonDisabled ? "btn-disabled" : ""}`}
                     onClick={() => navigateToAnswer(q.id)}

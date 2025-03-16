@@ -171,15 +171,15 @@ form a:hover {
   }
 
   .login-left {
-    min-height: 100vh;
-    margin-top: 8rem;
+    min-height: 85vh;
+    margin-top: 13rem;
   }
 
   .login-container .logo-container {
     width: 100%;
     padding: 10px;
     background: transparent;
-    margin-top: 0rem;
+    margin-top: 115px;
   }
 
   .logo-container {

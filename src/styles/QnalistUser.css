@@ -398,7 +398,7 @@ select option {
   font-size: 1.9rem;
 }
 .search-form button {
-  margin-right: 0.9em;
+  margin-right: 0.4em;
 }
 }
 
@@ -419,7 +419,7 @@ select option {
   margin-left: 0em;
 }
 .search-form button {
-  margin-right: 0.6em;
+  margin-right: 0.4em;
 }
 }
 

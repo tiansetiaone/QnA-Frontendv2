@@ -185,12 +185,12 @@
 @media (max-width: 768px) {
   .register-container {
     flex-direction: column;
-    min-height: 150vh;
+    min-height: 85vh;
   }
 
   .register-left {
     padding: 1rem;
-    margin-top: 12rem;
+    margin-top: 16rem;
   }
 
   .signIn {
@@ -267,13 +267,13 @@
   }
 
   .register-right {
-    margin-top : 2rem;
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   background: transparent;
-   width: 80%;
-   margin-left: 1.5rem;
+    margin-top: 4rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    width: 80%;
+    margin-left: 2.5rem;
   }
   .logo img {
     width: 11em;

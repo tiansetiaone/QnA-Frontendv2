@@ -474,6 +474,9 @@ position: relative;
   .category-list li .delete-btn {
             top: -0.3em;
       }
+      .category-list li .delete-btn {
+        margin-top: 0.6em;
+      }
 }
 
 
