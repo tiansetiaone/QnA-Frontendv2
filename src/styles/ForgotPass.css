@@ -246,19 +246,6 @@ form a:hover {
   margin-top: 7rem;
 }
 
-
-  .login-container .logo-container2 {
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    margin-top: 3rem;
-  }
-
-  .logo-container2 {
-    position: absolute;
-    top: 0;
-  }
-
   .logo-container2 img {
     width: 10em;
   }

@@ -276,7 +276,6 @@
 @media (max-width: 480px) {
   .profil-container {
     flex-direction: column;
-    min-height: 140vh;
     padding: 1rem;
   }
 

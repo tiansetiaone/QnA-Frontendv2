@@ -1,6 +1,6 @@
 .register-container {
   display: flex;
-  height: 100vh;
+  height: 106vh;
   background: linear-gradient(to right, #2c736d, #53d9ce);
 }
 
@@ -189,8 +189,8 @@
   }
 
   .register-left {
-    padding: 1rem;
-    margin-top: 16rem;
+    padding: 6rem;
+    margin-top: 9rem;
   }
 
   .signIn {
@@ -288,13 +288,12 @@
 /* Breakpoint untuk layar <= 480px */
 @media (max-width: 480px) {
   .register-container {
-    padding: 1rem;
-    min-height: 131vh;
-  }
-
+    height: 105vh;
+}
   .register-left {
     text-align: center;
     margin-top: 8em;
+    padding: 6rem;
   }
 
   .signIn {
@@ -387,13 +386,7 @@
     display: none;
   }
   .register-right {
-    margin-top : 2rem;
-   position: absolute;
-   display: flex;
-   justify-content: center;
-   background: transparent;
-   width: 80%;
-   margin-left: -1rem;
+    margin-left: 1rem;
   }
 }
 
