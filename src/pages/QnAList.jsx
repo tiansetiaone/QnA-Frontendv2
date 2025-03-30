@@ -21,7 +21,7 @@ const QnAList = () => {
   const questionsPerPage = 5; // Jumlah pertanyaan per halaman
   const navigate = useNavigate();
   const loggedInAdminId = localStorage.getItem("adminId");
-  const loggedInAdminGroup = localStorage.getItem("adminGroup");
+  const loggedInAdminGroup = Number(localStorage.getItem("adminGroup"));
   // const loggedInAdminGroupId = localStorage.getItem("group_id");
   const isNarasumber = Number(localStorage.getItem("is_narasumber"));
   const [filterByAdmin, setFilterByAdmin] = useState("all");
@@ -147,52 +147,42 @@ const QnAList = () => {
   };
 
 
-  const filteredQuestions = questions.filter((q) => {
-    const assignedToMe = Number(q.assigned_to) === Number(loggedInAdminId);
-    // const isFromMyGroup = String(q.group_id) === String(loggedInAdminGroupId);
-    // const assignedToMyGroup = String(q.assigned_to) === String(loggedInAdminGroup);   
+  const filteredQuestions = questions.filter((q) => { 
+    const assignedToMe = Number(q.assigned_to) === loggedInAdminGroup;
     
+    console.log(`Checking question ${q.id}: assigned_to ${q.assigned_to}, admin ID ${loggedInAdminGroup}, Match: ${assignedToMe}`);  
+
     if (isNarasumber === 0) {
-      console.log("User is not a Narasumber.");
-      const result =
-        filterByAdmin === "all" &&
-        (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
-        (selectedStatus === "" || String(q.status) === String(selectedStatus));
-      return result;
+        console.log("User is not a Narasumber.");
+        return (
+            filterByAdmin === "all" &&
+            (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
+            (selectedStatus === "" || String(q.status) === String(selectedStatus))
+        );
     }
-  
+
     if (isNarasumber === 1) {
-      console.log("User is a Narasumber.");
-      if (filterByAdmin === "all") {
-        const result =
-          (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
-          (selectedStatus === "" || String(q.status) === String(selectedStatus));
-        return result;
-      }
-  
-      if (filterByAdmin === "assigned") {
-        const result =
-          assignedToMe &&
-          (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
-          (selectedStatus === "" || String(q.status) === String(selectedStatus));
-        return result;
-      }
-  
-      // if (filterByAdmin === "group") {
-      //   const result =
-      //   isFromMyGroup && 
-      //   assignedToMyGroup &&
-      //   (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
-      //   (selectedStatus === "" || String(q.status) === String(selectedStatus));
-  
-      //   console.log("Result for filter 'group':", result);
-      //   return result;
-      // }
+        console.log("User is a Narasumber.");
+        if (filterByAdmin === "all") {
+            return (
+                (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
+                (selectedStatus === "" || String(q.status) === String(selectedStatus))
+            );
+        }
+
+        if (filterByAdmin === "assigned") {
+            return (
+                assignedToMe &&
+                (selectedCategory === "" || Number(q.category_id) === Number(selectedCategory)) &&
+                (selectedStatus === "" || String(q.status) === String(selectedStatus))
+            );
+        }
     }
 
     return false;
-  });
+});
   
+  console.log("Filtered Questions:", filteredQuestions);
   
   // Hitung data untuk paginasi
   const indexOfLastQuestion = currentPage * questionsPerPage;
